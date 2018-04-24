@@ -7,8 +7,8 @@ def u_(t):
     else:
         return 0
 
-t = np.arange(-15.0, 15.0, 1)
-n = np.arange(-15.0, 15.0, 1)
+t = np.arange(-13.0, 13.0, 1)
+n = np.arange(-13.0, 13.0, 1)
 u = np.vectorize(u_)
 
 xa = (2+t)*u(t+2) + (8-2*t)*u(t-4) - (7-t)*u(t-7)
