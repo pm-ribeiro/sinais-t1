@@ -8,7 +8,7 @@ def u_(t):
         return 0
 
 u = np.vectorize(u_)
-t = np.arange(-6,10.0, 1)
+t = np.arange(-7,10, 1)
 x1 = u(t) + 2*u(t-3) - 2*u(t-6) - u(t-6)
 plt.subplot(221)
 plt.stem(t,x1)

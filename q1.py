@@ -18,18 +18,18 @@ xd = (2*n**2)*u(-t) - (n+50)*u(-n-6) - (2*n**2-n-80)*u(-n-9)
 
 plt.subplot(221)
 plt.plot(t, xa)
-plt.title('Questão 1 - letra a')
+plt.title('1 (a)')
 
 plt.subplot(222)
 plt.step(t,xb) 
-plt.title('Questão 1 - letra b')
+plt.title('1 (b)')
 
 plt.subplot(223)
 plt.stem(t,xc)
-plt.title('Questão 1 - letra c')
+plt.title('1 (c)')
 
 plt.subplot(224)
 plt.stem(t,xd)
-plt.title('Questão 1 - letra d')
+plt.title('1 (d)')
 
 plt.show()
