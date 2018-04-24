@@ -8,18 +8,24 @@ def u_(t):
         return 0
 
 u = np.vectorize(u_)
-t = np.arange(-7,10, 1)
-x1 = u(t) + 2*u(t-3) - 2*u(t-6) - u(t-6)
+
+#intervalo -7 a 9
+n = np.arange(-7,9, 1)
+x1 = u(n) + 2*u(n-3) - 2*u(n-6) - u(n-6)
 plt.subplot(221)
-plt.stem(t,x1)
+plt.title('h[n]')
+plt.stem(n,x1)
 
-x2 = 3*u(t+2) - u(t-1) - u(t-2) - u(t-3)
+
+x2 = 3*u(n+2) - u(n-1) - u(n-2) - u(n-3)
 plt.subplot(222)
-plt.stem(t,x2)
+plt.title('x[n]')
+plt.stem(n,x2)
 
-x = np.convolve(x1,x2,'same')
+#x[n]*h[n-k]
+x = np.convolve(x2,x1,'same')
 plt.subplot(212)
-plt.title('Questão 6')
-plt.stem(t,x)
+plt.title('x[n]*h[n-k]')
+plt.stem(n,x)
 
 plt.show()
